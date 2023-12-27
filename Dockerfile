@@ -10,4 +10,8 @@ COPY . .
 
 RUN yarn build
 
-COPY /app/dist /app/
+FROM node:18-alpine3.19 as production
+
+WORKDIR /app
+
+COPY --from=build /app/dist/* /app/
