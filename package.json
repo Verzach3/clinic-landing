@@ -17,6 +17,8 @@
     "@mantine/hooks": "^7.3.2",
     "@mantine/modals": "^7.3.2",
     "@mantine/notifications": "^7.3.2",
+    "@mantinex/mantine-logo": "^1.0.1",
+    "@tabler/icons-react": "^2.44.0",
     "dayjs": "^1.11.10",
     "embla-carousel-react": "8.0.0-rc17",
     "react": "^18.2.0",
