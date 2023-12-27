@@ -10,7 +10,7 @@ COPY . .
 
 RUN yarn build
 
-FROM node:18-alpine3.19 as production
+FROM socialengine/nginx-spa as production
 
 WORKDIR /app
 

@@ -1,7 +1,5 @@
 {
   "schemaVersion": 2,
-  "dockerfileLines": [
-    "FROM socialengine/nginx-spa:latest" 
-  ]
+  "dockerfilePath": "Dockerfile"
 
 }
