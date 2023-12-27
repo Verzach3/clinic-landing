@@ -17,10 +17,13 @@
     "@mantine/hooks": "^7.3.2",
     "@mantine/modals": "^7.3.2",
     "@mantine/notifications": "^7.3.2",
+    "@mantinex/mantine-logo": "^1.0.1",
+    "@tabler/icons-react": "^2.44.0",
     "dayjs": "^1.11.10",
     "embla-carousel-react": "8.0.0-rc17",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -31,6 +34,9 @@
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "postcss-preset-mantine": "^1.12.2",
+    "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
