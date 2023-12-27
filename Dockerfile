@@ -18,4 +18,4 @@ COPY package.json ./
 
 RUN yarn install --production
 
-COPY --from=build /app/dist ./dist
+COPY --from=build /app/dist /app/dist
