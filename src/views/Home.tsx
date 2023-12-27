@@ -1,4 +1,4 @@
-import { Overlay, Container, Title, Button, Text, Grid } from "@mantine/core";
+import { Overlay, Container, Title, Button, Text } from "@mantine/core";
 import classes from "./Home.module.css";
 import { FeaturesTitle } from "../components/home/Features";
 import { ContactForm } from "../components/home/ContactForm";
