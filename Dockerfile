@@ -10,4 +10,4 @@ COPY . .
 
 RUN yarn build
 
-COPY --from=build /app/dist /app/dist
+COPY --from=build /app/dist /app/
