@@ -95,7 +95,7 @@ export function Header() {
         <Group justify="space-between" h="100%">
           <MantineLogo size={30} />
           <Group h="101%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>
               Home
             </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
@@ -142,11 +142,11 @@ export function Header() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
-              Learn
+            <a href="/blog" className={classes.link}>
+              Noticias
             </a>
-            <a href="#" className={classes.link}>
-              Academy
+            <a href="/about" className={classes.link}>
+              Nosotros
             </a>
           </Group>
 
@@ -187,10 +187,10 @@ export function Header() {
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
           <a href="#" className={classes.link}>
-            Learn
+            Noticias
           </a>
           <a href="#" className={classes.link}>
-            Academy
+            Nosotros
           </a>
 
           <Divider my="sm" />
