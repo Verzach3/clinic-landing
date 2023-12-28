@@ -199,7 +199,7 @@ export function Header() {
               </HoverCard.Dropdown>
             </HoverCard>
             <a href="/blog" className={classes.link}>
-              Noticias
+              Blog
             </a>
             <a href="/about" className={classes.link}>
               Nosotros
