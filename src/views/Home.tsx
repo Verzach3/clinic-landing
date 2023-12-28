@@ -1,7 +1,7 @@
 import { Overlay, Container, Title, Button, Text } from "@mantine/core";
 import classes from "./Home.module.css";
 import { FeaturesTitle } from "../components/home/Features";
-import { ContactForm } from "../components/home/ContactForm";
+import { ContactUs } from "../components/home/ContactUs";
 
 function Home() {
   return (
@@ -35,8 +35,9 @@ function Home() {
           <FeaturesTitle />
         </Container>
         <Container>
-          <ContactForm/>
+          <ContactUs/>
         </Container>
+    
     </div>
   );
 }
