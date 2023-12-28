@@ -17,7 +17,7 @@ import {
   rem,
   useMantineTheme,
 }from '@mantine/core';
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
 import {
@@ -30,10 +30,10 @@ import {
   IconChevronDown,
   IconGenderFemme,
   IconGenderFemale
-
+}from '@tabler/icons-react'
 import classes from "./Header.module.css";
 
-import classes from './Header.module.css';
+
 
 
 const mockdata = [
