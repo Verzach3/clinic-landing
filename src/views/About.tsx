@@ -1,5 +1,5 @@
 import { Overlay, Container, Title, Text } from "@mantine/core";
-import classes from "./Home.module.css";
+import classes from "./About.module.css";
 
 function About() {
   return (
@@ -11,13 +11,23 @@ function About() {
       />
       <Container className={classes.container} size="md">
         <Title className={classes.title}>WellFit Clinic</Title>
+        
+        <Title className={classes.title}>Mision:</Title>
         <Text className={`${classes.description} justifiedText`} size="xl" mt="xl">
   En WellFit Clinics, nuestro compromiso es la excelencia en la promoción de la salud y el bienestar personal.<br /><br />
 
   Ofrecemos soluciones integrales para el fitness y la salud, desde entrenamientos de alta energía y asesoramiento nutricional hasta estrategias de manejo del estrés y prevención de enfermedades. Con integridad y rigor científico, empoderamos a nuestros clientes para tomar decisiones informadas y alcanzar sus metas de salud a largo plazo.
 </Text>
+
+
+
       </Container>
     </div>
+
+    
+
+
+
   );
 }
 
