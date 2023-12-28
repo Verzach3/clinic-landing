@@ -8,7 +8,7 @@ function App() {
       <AppShell.Header>
         <Header />
       </AppShell.Header>
-      <AppShell.Main style={{ paddingTop: 0}}>
+      <AppShell.Main >
         <Outlet />
       </AppShell.Main>
     </AppShell>
