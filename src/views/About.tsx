@@ -1,4 +1,4 @@
-import { Overlay, Container, Title, Button, Text } from "@mantine/core";
+import { Overlay, Container, Title, Text } from "@mantine/core";
 import classes from "./Home.module.css";
 
 function About() {
