@@ -1,4 +1,4 @@
-import { Container } from "@mantine/core";
+import { Center, Container, Stack } from "@mantine/core";
 import {
   createDirectus,
   DirectusClient,
@@ -7,6 +7,9 @@ import {
   readItems,
 } from "@directus/sdk";
 import { useEffect, useState } from "react";
+import { BlogListItem } from "./blog/BlogListItem";
+import { BlogCarousel } from "./blog/BlogCarousel";
+
 function Blog() {
   const [directus, setDirectus] = useState<
     (DirectusClient<any> & RestClient<any>) | undefined
@@ -31,7 +34,19 @@ function Blog() {
 
   return (
     <Container>
-      <h1>Blog</h1>
+      <Center>
+        <h1>Ultimos Posts</h1>
+      </Center>
+      <div style={{ marginBottom: "2rem"}}>
+        <BlogCarousel />
+      </div>
+      <Stack>
+        <BlogListItem />
+        <BlogListItem />
+        <BlogListItem />
+        <BlogListItem />
+        <BlogListItem />
+      </Stack>
     </Container>
   );
 }
