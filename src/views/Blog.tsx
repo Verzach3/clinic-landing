@@ -14,7 +14,7 @@ function Blog() {
 
   useEffect(() => {
     setDirectus(
-      createDirectus("http://directus.caprover.thepanas.me/").with(rest())
+      createDirectus("https://directus.caprover.thepanas.me/").with(rest())
     );
   }, []);
 

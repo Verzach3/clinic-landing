@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <AppShell styles={{ main: { height: "100%" } }} >
+    <AppShell header={{ height: 60}}>
       <AppShell.Header>
         <Header />
       </AppShell.Header>
-      <AppShell.Main>
+      <AppShell.Main style={{ paddingTop: 0}}>
         <Outlet />
       </AppShell.Main>
     </AppShell>
