@@ -16,9 +16,10 @@ import {
   ScrollArea,
   rem,
   useMantineTheme,
-} from "@mantine/core";
-import { MantineLogo } from "@mantinex/mantine-logo";
-import { useDisclosure } from "@mantine/hooks";
+}from '@mantine/core';
+import { useNavigate } from "react-router-dom";
+import { MantineLogo } from '@mantinex/mantine-logo';
+import { useDisclosure } from '@mantine/hooks';
 import {
   IconStatusChange,
   IconThermometer,
@@ -27,9 +28,13 @@ import {
   IconArrowDownBar,
   IconMoodSick,
   IconChevronDown,
-} from "@tabler/icons-react";
+  IconGenderFemme,
+  IconGenderFemale
 
 import classes from "./Header.module.css";
+
+import classes from './Header.module.css';
+
 
 const mockdata = [
   {
@@ -64,13 +69,32 @@ const mockdata = [
     description:
       "Alteraciones del estado de ánimo, inquietud y tristeza profunda.",
   },
+
 ];
+const mockdataCategorias = [
+  {
+    icon: IconGenderFemme,
+    title: 'Recursos para Hombres',
+    description: 'Conocer mas para contenido de caballero',
+    path: '/info/men'
+  },
+  {
+    icon: IconGenderFemale,
+    title: 'Recursos para mujeres',
+    description: 'Conocer mas para contenido de Femenino',
+    path: '/info/woman'
+  },
+];
+
 
 export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+  const [linksOpenedCategorias, { toggle: toggleLinksCategorias }] = useDisclosure(false);
   const theme = useMantineTheme();
+  const theme1 = useMantineTheme();
+  const navigate = useNavigate();
 
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
@@ -92,6 +116,27 @@ export function Header() {
       </Group>
     </UnstyledButton>
   ));
+
+  const linksCategorias = mockdataCategorias.map((item) => (
+
+    <UnstyledButton className={classes.subLink} key={item.title} onClick={()=> navigate(item.path)}>
+      <Group wrap="nowrap" align="flex-start">
+        <ThemeIcon size={34} variant="default" radius="md">
+          <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} />
+        </ThemeIcon>
+        <div>
+          <Text size="sm" fw={500}>
+            {item.title}
+          </Text>
+          <Text size="xs" c="dimmed">
+            {item.description}
+          </Text>
+        </div>
+      </Group>
+    </UnstyledButton>
+
+  ));
+
 
   return (
     <>
@@ -159,6 +204,40 @@ export function Header() {
             <a href="/about" className={classes.link}>
               Nosotros
             </a>
+
+            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
+              <HoverCard.Target>
+                <a href="#" className={classes.linksCategorias}>
+                  <Center inline>
+                    <Box component="span" mr={5}>
+                      Categorias
+                    </Box>
+                    <IconChevronDown
+                      style={{ width: rem(16), height: rem(16) }}
+                      color={theme.colors.blue[6]}
+                    />
+                  </Center>
+                </a>
+              </HoverCard.Target>
+
+              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
+                <Group justify="space-between" px="md">
+                  <Text fw={500}>Especialidad variada</Text>
+                  <Anchor href="/infowoman" fz="xs">
+                    View all
+                  </Anchor>
+                </Group>
+
+                <SimpleGrid cols={2} spacing={0}>
+                  {linksCategorias}
+                </SimpleGrid>
+
+                <Divider my="sm" />
+
+              </HoverCard.Dropdown>
+            </HoverCard>
+
+            
           </Group>
 
           <Group visibleFrom="sm">
@@ -201,13 +280,25 @@ export function Header() {
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            Noticias
+          <a href="/blog" className={classes.link}>
+            Blog
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/about" className={classes.link}>
             Nosotros
           </a>
 
+          <UnstyledButton className={classes.linksCategorias} onClick={toggleLinksCategorias}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Categorias
+              </Box>
+              <IconChevronDown
+                style={{ width: rem(16), height: rem(16) }}
+                color={theme1.colors.blue[6]}
+              />
+            </Center>
+          </UnstyledButton>
+          <Collapse in={linksOpenedCategorias}>{linksCategorias}</Collapse>
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
