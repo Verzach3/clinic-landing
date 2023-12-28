@@ -1,4 +1,5 @@
 import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css"
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
@@ -7,6 +8,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./views/Home.tsx";
 import Blog from "./views/Blog.tsx";
 import About from "./views/About.tsx";
+import InfoForWomens from "./views/InfoForWomens.tsx";
+import InfoForMens from "./views/InfoForMens.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,27 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog/>,
+      },
+      {
+        path: "/info/woman",
+        element: <InfoForWomens/>,
+        children:[
+          {
+            path:'/info/woman',
+            element:<h1> EJEMPLO</h1>
+          }
+        ]
+      },
+
+      {
+        path: "/info/men",
+        element: <InfoForMens/>,
+        children:[
+          {
+            path:'/info/men',
+            element:<h1> EJEMPLO</h1>
+          }
+        ]
       },
     ],
   },

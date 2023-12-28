@@ -13,13 +13,10 @@ function Home() {
           zIndex={0}
         />
         <Container className={classes.container} size="md">
-          <Title className={classes.title}>Titulo Grande</Title>
-          <Text className={classes.description} size="xl" mt="xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta
-            fugiat, maiores, possimus accusamus ullam suscipit earum eius
-            facilis qui enim accusantium omnis. Laudantium, corporis beatae
-            earum deserunt ipsa magni exercitationem.
-          </Text>
+        <Title className={classes.title}>Descubre tu potencial con WellFit Clinics</Title>
+<Text className={classes.description} size="xl" mt="xl">
+  Revoluciona tu enfoque hacia la salud y el bienestar con nuestros programas de bienestar hechos a medida. En WellFit Clinics, combinamos la ciencia del fitness con atención personalizada para guiarte hacia tu mejor versión. Únete a nosotros y experimenta el poder de una salud óptima y personalizada.
+</Text>
 
           <Button
             variant="gradient"

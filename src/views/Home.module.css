@@ -6,7 +6,7 @@
 }
 
 .container {
-  height: rem(700px);
+  height: rem(800px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
