@@ -11,6 +11,7 @@ import About from "./views/About.tsx";
 import InfoForWomens from "./views/InfoForWomens.tsx";
 import InfoForMens from "./views/InfoForMens.tsx";
 import Footer from "./views/Footer.tsx";
+import BlogView from "./views/blog/BlogView.tsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog/>,
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogView/>,
       },
       {
         path: "/info/woman",
