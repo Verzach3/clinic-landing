@@ -1,6 +1,36 @@
+import { DirectusClient, RestClient, createDirectus, rest, readItem } from "@directus/sdk";
 import { Container, Image, Stack, Text, Title } from "@mantine/core";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { BlogPost } from "../../types/blogPost";
 
 function BlogView() {
+  const params = useParams();
+  const [_blogPost, setBlogPost] = useState<BlogPost| undefined>();
+  const [directus, setDirectus] = useState<
+    (DirectusClient<any> & RestClient<any>) | undefined
+  >(undefined);
+
+  useEffect(() => {
+    setDirectus(
+      createDirectus("https://directus.caprover.thepanas.me/").with(rest())
+    );
+  }, []);
+  async function getPosts() {
+    const result = await directus?.request(
+      // TODO change this any to a type
+      readItem("posts" as any, params.id as any)
+    );
+    console.log(result);
+    setBlogPost(result as unknown as BlogPost);
+  }
+
+  useEffect(() => {
+    if (directus) {
+      getPosts();
+    }
+  }, [directus]);
+
   return (
     <Container>
       <Stack>

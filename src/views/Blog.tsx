@@ -1,4 +1,4 @@
-import { Center, Container, Stack } from "@mantine/core";
+import { Center, Container } from "@mantine/core";
 import {
   createDirectus,
   DirectusClient,
@@ -12,7 +12,7 @@ import { ArticlesCardsGrid } from "./blog/ArticlesCardGrid";
 import { BlogPost } from "../types/blogPost";
 
 function Blog() {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[] | undefined>()
+  const [blogPosts, setBlogPosts] = useState<BlogPost[] | undefined>();
   const [directus, setDirectus] = useState<
     (DirectusClient<any> & RestClient<any>) | undefined
   >(undefined);
@@ -22,13 +22,15 @@ function Blog() {
       createDirectus("https://directus.caprover.thepanas.me/").with(rest())
     );
   }, []);
-
   async function getPosts() {
-    const result = await directus?.request(readItems("posts", {
-      fields: ["title", "recent", "tags", "image", "date_updated"]
-    }));
+    const result = await directus?.request(
+      // TODO change this any to a type
+      readItems("posts" as any, {
+        fields: ["title", "recent", "tags", "image", "date_updated"],
+      })
+    );
     console.log(result);
-    setBlogPosts(result as BlogPost[])
+    setBlogPosts(result as BlogPost[]);
   }
 
   useEffect(() => {
@@ -42,15 +44,18 @@ function Blog() {
       <Center>
         <h1>Ultimos Posts</h1>
       </Center>
-      {blogPosts ? <>
-        <div style={{ marginBottom: "2rem" }}>
-          <BlogCarousel items={blogPosts.filter((blogpost) => blogpost.recent)} />
-        </div>
-        <ArticlesCardsGrid items={blogPosts} />
-      </>
-        :
+      {blogPosts ? (
+        <>
+          <div style={{ marginBottom: "2rem" }}>
+            <BlogCarousel
+              items={blogPosts.filter((blogpost) => blogpost.recent)}
+            />
+          </div>
+          <ArticlesCardsGrid items={blogPosts} />
+        </>
+      ) : (
         <h3>No hay post publicados</h3>
-      }
+      )}
     </Container>
   );
 }
