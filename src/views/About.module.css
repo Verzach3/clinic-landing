@@ -20,7 +20,27 @@
       padding-bottom: calc(var(--mantine-spacing-xl) * 3);
     }
   }
+  missionTitle {
+    color: #123456; /* Elige un color apropiado */
+    margin-top: 20px;
+    font-size: 24px; /* Ajusta según sea necesario */
+  }
   
+  .missionText, .valuesText {
+    color: #565656; /* Elige un color apropiado */
+    margin-top: 15px;
+    font-size: 18px; /* Ajusta según sea necesario */
+  }
+  
+  .valuesTitle {
+    color: #123456; /* Elige un color apropiado */
+    margin-top: 20px;
+    font-size: 22px; /* Ajusta según sea necesario */
+  }
+  
+  .valueItem {
+    margin-top: 10px;
+  }
   .title {
     color: var(--mantine-color-white);
     font-size: rem(60px);

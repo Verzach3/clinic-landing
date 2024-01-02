@@ -9,6 +9,7 @@ import {
   rem,
 } from "@mantine/core";
 import classes from "./BlogCarousel.module.css";
+import { BlogPost } from "../../types/blogPost";
 
 interface CardProps {
   image: string;
@@ -22,7 +23,7 @@ function Card({ image, title, category }: CardProps) {
       shadow="md"
       p="xl"
       radius="md"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(https://directus.caprover.thepanas.me/assets/${image})` }}
       className={classes.card}
     >
       <div>
@@ -79,14 +80,18 @@ const data = [
   },
 ];
 
-export function BlogCarousel() {
+export function BlogCarousel({ items }: { items: BlogPost[]}) {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  const slides = data.map((item) => (
+  const slides = items.map((item) => (
     <Carousel.Slide key={item.title}>
-      <Card {...item} />
+      <Card category="test" {...item} />
     </Carousel.Slide>
   ));
+
+  if (items.length === 0) {
+    return null;
+  }
 
   return (
     <Carousel
