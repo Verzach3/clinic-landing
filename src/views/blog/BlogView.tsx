@@ -4,58 +4,67 @@ function BlogView() {
   return (
     <Container>
       <Stack>
-        <Title ta={"center"} mt={"xl"}>Titulo del Blog</Title>
+        <Title ta={"center"} mt={"xl"}>
+          Entendiendo la Pérdida de Cabello: La Ciencia Detrás de la Caída del
+          Cabello
+        </Title>
         <Text size="xs" ta={"center"} c={"gray"}>
-          Nombre del Autor | Fecha de creacion: 12/12/2021
+          Tony | Diciembre 27, 2023 | 5 min de lectura
+        </Text>
+        <Text size="xl" ta={"center"} mt={"xl"} mb={"xl"}>
+          La pérdida de cabello es una preocupación común para muchos, pero ¿qué
+          es lo que realmente causa que nuestro cabello se adelgace y caiga? La
+          respuesta se encuentra en nuestra biología y el ciclo de vida complejo
+          de los folículos capilares. Cada cabello pasa por tres fases críticas:
+          la fase de crecimiento (anágena), la fase de regresión (catágena) y la
+          fase de reposo (telógena). Durante estas fases, varios factores,
+          incluyendo hormonas y flujo sanguíneo, juegan un papel crucial en
+          determinar la salud y longevidad de nuestro cabello.
         </Text>
 
-        <Text size="xl" ta={"center"}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
-          repellendus corrupti. Sed magni provident voluptates vitae enim odio
-          laudantium suscipit? Pariatur nihil distinctio debitis iusto similique
-          ex consequatur, cum ab. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, voluptatem reiciendis iure quod sint
-          perferendis voluptas tenetur ea maxime repellat nobis molestias, modi
-          eligendi mollitia dolor beatae expedita dolorum deleniti. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Labore neque molestiae
-          dolore corrupti soluta consequatur. Adipisci dolore praesentium quidem
-          iusto amet a ratione eius ipsam in, quis tempore molestias
-          voluptatibus! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Est ratione, veniam quaerat quasi numquam laborum officia
-          repudiandae molestias. Repellat in, tempora veniam earum nemo ad autem
-          nostrum vel sunt adipisci!
+        <Title order={2} ta={"center"}>
+          La Influencia Hormonal
+        </Title>
+
+        <Text size="xl" ta={"center"} mb={"xl"}>
+          Las hormonas son los principales impulsores del crecimiento del
+          cabello, actuando como aceleradores o frenos a lo largo de su ciclo de
+          vida. Por ejemplo, la dihidrotestosterona (DHT), un derivado de la
+          testosterona, puede acortar la fase anágena y extender las fases
+          catágena y telógena, lo que lleva a la pérdida de cabello. Es por esto
+          que los tratamientos que apuntan a la DHT pueden ser efectivos para
+          preservar y regenerar el cabello.
         </Text>
-        <Image src={"https://images.unsplash.com/photo-1682685797277-f2bf89b24017?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}/>
-        <Text size="xl" ta={"center"}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
-          repellendus corrupti. Sed magni provident voluptates vitae enim odio
-          laudantium suscipit? Pariatur nihil distinctio debitis iusto similique
-          ex consequatur, cum ab. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, voluptatem reiciendis iure quod sint
-          perferendis voluptas tenetur ea maxime repellat nobis molestias, modi
-          eligendi mollitia dolor beatae expedita dolorum deleniti. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Labore neque molestiae
-          dolore corrupti soluta consequatur. Adipisci dolore praesentium quidem
-          iusto amet a ratione eius ipsam in, quis tempore molestias
-          voluptatibus! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Est ratione, veniam quaerat quasi numquam laborum officia
-          repudiandae molestias. Repellat in, tempora veniam earum nemo ad autem
-          nostrum vel sunt adipisci!
+
+        <Title order={2} ta={"center"}>
+          Aumentando el Flujo Sanguíneo para el Crecimiento del Cabello
+        </Title>
+        <Text size="xl" ta={"center"} mb={"xl"}>
+          El flujo sanguíneo también es crucial para la salud del cabello, ya
+          que entrega nutrientes y oxígeno esenciales a los folículos capilares.
+          Tratamientos como el Minoxidil, inicialmente un medicamento para la
+          hipertensión, funcionan aumentando el flujo sanguíneo al cuero
+          cabelludo. Esta extensión de la fase anágena puede ayudar a mantener
+          el cabello existente y a ralentizar la pérdida del mismo.
         </Text>
-        <Text size="xl" ta={"center"}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
-          repellendus corrupti. Sed magni provident voluptates vitae enim odio
-          laudantium suscipit? Pariatur nihil distinctio debitis iusto similique
-          ex consequatur, cum ab. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quos, voluptatem reiciendis iure quod sint
-          perferendis voluptas tenetur ea maxime repellat nobis molestias, modi
-          eligendi mollitia dolor beatae expedita dolorum deleniti. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Labore neque molestiae
-          dolore corrupti soluta consequatur. Adipisci dolore praesentium quidem
-          iusto amet a ratione eius ipsam in, quis tempore molestias
-          voluptatibus! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Est ratione, veniam quaerat quasi numquam laborum officia
-          repudiandae molestias
+
+        <Image
+          src={
+            "https://directus.caprover.thepanas.me/assets/fb4ede6d-e167-4731-969b-2857e2bd53fb"
+          }
+        />
+        <Title order={2} ta={"center"}>
+          Combinando Tratamientos para Resultados Mejorados
+        </Title>
+        <Text size="xl" ta={"center"} mb={"xl"}>
+          Curiosamente, combinar tratamientos como la microagujación con
+          Minoxidil puede ser más efectivo que usar cualquiera de los
+          tratamientos por separado. La microagujación, que implica causar
+          pequeñas punciones en el cuero cabelludo con agujas, puede reactivar
+          las células madre inactivas en los folículos capilares, estimulando el
+          crecimiento de nuevo cabello. Cuando se utiliza junto con Minoxidil,
+          este método ha mostrado resultados prometedores en la recuperación de
+          'zonas muertas' en el cuero cabelludo.
         </Text>
       </Stack>
     </Container>
