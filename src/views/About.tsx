@@ -136,16 +136,11 @@ function About() {
 
 
     <div>
-      {/* Sección Hero y Misión existentes */}
-      {/* ... */}
-
-      {/* Sección Lo que nos distingue */}
-      {/* ... */}
-
+    
       {/* Sección de Valores Corporativos */}
       <Container className={classes.coreValuesSection}>
         <Title className={classes.sectionTitle}>Nuestros Valores Corporativos</Title>
-        <SimpleGrid cols={2} spacing="lg">
+        <SimpleGrid cols={3} spacing="lg">
           {coreValuesElements}
         </SimpleGrid>
       </Container>

@@ -42,32 +42,39 @@ const mockdata = [
     title: "Dolor de cabeza",
     description:
       "Sensación dolorosa en cualquier parte de la cabeza, variando en intensidad.",
+    path: '/sintomas/dolorcabeza'
+
   },
   {
     icon: IconMoodSick,
     title: "Fatiga",
     description: " Cansancio extremo y falta de energía persistente",
+    path: '/sintomas/fatiga'
   },
   {
     icon: IconCircuitSwitchClosed,
     title: "Perdida de cabello",
     description: "Reducción notable de cabello en el cuero cabelludo.",
+    path: '/sintomas/perdidacabello'
   },
   {
     icon: IconArrowDownBar,
     title: "Bajo deseo sexual",
     description: "Disminución del interés en la actividad sexual.",
+    path: '/sintomas/bajodeseo'
   },
   {
     icon: IconHazeMoon,
     title: "Sofocos / Sudores nocturnos",
     description: "Calor repentino y transpiración excesiva durante la noche",
+    path: '/sintomas/sofocos'
   },
   {
     icon: IconStatusChange,
     title: "Cambios de Humos /Ansiedad  / Depresion",
     description:
       "Alteraciones del estado de ánimo, inquietud y tristeza profunda.",
+    path: '/sintomas/ansiedad'
   },
 
 ];
@@ -88,16 +95,17 @@ const mockdataCategorias = [
 
 
 export function Header() {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
-    useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const [linksOpenedCategorias, { toggle: toggleLinksCategorias }] = useDisclosure(false);
   const theme = useMantineTheme();
   const theme1 = useMantineTheme();
   const navigate = useNavigate();
 
+
+  
   const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
+    <UnstyledButton className={classes.subLink} key={item.title} onClick={()=> navigate(item.path)}>
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
           <item.icon

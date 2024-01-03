@@ -1,10 +1,12 @@
 .hero {
   position: relative;
-  background-image: url(/bg-home.jpg);
+  background-image: url(/fondo2.png);
   background-size: cover;
   background-position: center;
 }
-
+.contactUsContainer {
+  margin-top: 50px; /* Ajusta este valor según sea necesario */
+}
 .container {
   height: rem(800px);
   display: flex;
@@ -48,9 +50,13 @@
   }
 }
 
+
+
 .control {
   margin-top: calc(var(--mantine-spacing-xl) * 1.5);
-
+  display: flex;
+  justify-content: flex-end; 
+  text-align:right;
   @media (max-width: $mantine-breakpoint-sm) {
     width: 100%;
   }
