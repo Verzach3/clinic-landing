@@ -57,3 +57,57 @@
       width: 100%;
     }
   }
+
+
+  /* Banner.module.css */
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  align-items: center; /* Alinea verticalmente el contenido */
+  gap: 2rem; /* Espacio entre las columnas */
+  padding: var(--mantine-spacing-md) 0;
+  margin: 30px;
+}
+
+.bannerTitle {
+  grid-column: 1 / 2;
+  /* Tus estilos existentes para .bannerTitle */
+}
+
+.bannerDescription {
+  grid-column: 2 / 3;
+  margin: 20px;
+  /* Tus estilos existentes para .bannerDescription */
+}
+
+.bannerButton {
+  grid-column: 2 / 3; /* Coloca el botón en la segunda columna */
+  justify-self: start; /* Alinea el botón al inicio de la columna */
+  background-color: #4CAF50; /* Un verde bonito */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Botón redondeado */
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #45a049; /* Un poco más oscuro al pasar el mouse */
+  }
+}
+
+/* Asegúrate de ajustar los breakpoints para la responsividad */
+@media (max-width: $mantine-breakpoint-md) {
+  .banner {
+    grid-template-columns: 1fr; /* Una sola columna para dispositivos más pequeños */
+  }
+
+  .bannerTitle, .bannerDescription, .bannerButton {
+    grid-column: 1 / 2;
+  }
+
+  .bannerButton {
+    justify-self: center; /* Centra el botón en dispositivos más pequeños */
+  }
+}

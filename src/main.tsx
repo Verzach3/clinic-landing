@@ -17,6 +17,9 @@ import SintomasFatiga from "./views/SintomasFatiga.tsx";
 import SintomasPerdidacabello from "./views/SintomasPerdidacabello.tsx";
 import SintomasBajodeseo from "./views/SintomasBajodeseo.tsx";
 import SintomasSofoco from "./views/SintomasSofoco.tsx";
+import SintomasAnsiedad from "./views/SintomasAnsiedad.tsx";
+
+
 
 const router = createBrowserRouter([
   {
@@ -97,6 +100,15 @@ const router = createBrowserRouter([
         element: <SintomasSofoco/>,
       },
 
+       {
+        path: '/sintomas/ansiedad',
+        element: <SintomasAnsiedad/>,
+      },
+
+      
+
+      
+   
 
       
     ],

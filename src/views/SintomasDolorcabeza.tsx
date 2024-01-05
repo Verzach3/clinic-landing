@@ -13,12 +13,12 @@ function SintomasDolorcabeza() {
       <div>
         <div className={classes.hero}>
           <Overlay
-            gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
+            gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, .65) 100%)"
             opacity={1}
             zIndex={0}
           />
           <Container className={classes.container} size="md">
-          <Title className={classes.title}>Sensaciones de Sofoco nocturnas</Title>
+          <Title className={classes.title}>Dolores de cabeza fuertes</Title>
   <Text className={classes.description} size="xl" mt="xl">
  En WellFit Clinics, combinamos la ciencia del fitness con atención personalizada para guiarte hacia tu mejor versión. Únete a nosotros y experimenta el poder de una salud óptima y personalizada.
   </Text>
