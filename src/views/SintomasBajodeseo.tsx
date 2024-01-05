@@ -18,7 +18,7 @@ function SintomasBajodeseo() {
           zIndex={0}
         />
         <Container className={classes.container} size="md">
-          <Title className={classes.title}>Problemas en su bienestar sexual? </Title>
+          <Title className={classes.title}>Problemas en su bienestar sexual? </Title> 
           <Text className={classes.description} size="xl" mt="xl">
             En WellFit Clinics, combinamos la ciencia del fitness con atención personalizada para guiarte hacia tu mejor versión. Únete a nosotros y experimenta el poder de una salud óptima y personalizada.
           </Text>
@@ -62,9 +62,47 @@ function SintomasBajodeseo() {
 
       </div>
 
+      <div className={classes.heroContac}>
+        <Overlay
+          gradient="linear-gradient(180deg, rgba(f, f, f, 9.1) 0%, rgba(f, f, f, .65) 80%)"
+          opacity={1}
+          zIndex={0}
+        />
+        <Container className={classes.containerContac} size="md">
+          <Title className={classes.titleContac}>Nuestro equipo de profesionales Solucionara todos tus problemas </Title> <br></br>
+
+           <Title className={classes.subtitle}>Abordar las causas fundamentales de la disfunción sexual y la baja libido. </Title>
+    
+          <Text className={classes.descriptionContac} size="xl" mt="xl">
+            En WellFit Clinics, combinamos la ciencia del fitness con atención personalizada para guiarte hacia tu mejor versión. Únete a nosotros y experimenta el poder de una salud óptima y personalizada.
+          </Text>
+
+          <Button
+            variant="gradient"
+            size="lg"
+            radius="xl"
+            className={classes.controlContac}
+            onClick={() => {
+              const contactUsSection = document.getElementById('contact-us');
+              if (contactUsSection) {
+                contactUsSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Adquirir informacion
+          </Button>
+
+
+        </Container>
+
+      </div>
+
       <Container className={classes.contactUsContainer} id="contact-us">
         <ContactUs />
       </Container>
+
+
+      
 
     </div>
   );
