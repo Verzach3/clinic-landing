@@ -12,6 +12,14 @@ import InfoForWomens from "./views/InfoForWomens.tsx";
 import InfoForMens from "./views/InfoForMens.tsx";
 import Footer from "./views/Footer.tsx";
 import BlogView from "./views/blog/BlogView.tsx";
+import SintomasDolorcabeza from "./views/SintomasDolorcabeza.tsx"
+import SintomasFatiga from "./views/SintomasFatiga.tsx";
+import SintomasPerdidacabello from "./views/SintomasPerdidacabello.tsx";
+import SintomasBajodeseo from "./views/SintomasBajodeseo.tsx";
+import SintomasSofoco from "./views/SintomasSofoco.tsx";
+import SintomasAnsiedad from "./views/SintomasAnsiedad.tsx";
+
+
 
 const router = createBrowserRouter([
   {
@@ -64,10 +72,49 @@ const router = createBrowserRouter([
           }
         ]
       },
+
+
+      {
+        path: '/sintomas/dolorcabeza',
+        element: <SintomasDolorcabeza/>,
+      },
+
+      {
+        path: '/sintomas/fatiga',
+        element: <SintomasFatiga/>,
+      },
+
+      {
+        path: '/sintomas/perdidacabello',
+        element: <SintomasPerdidacabello/>,
+      },
+
+
+      {
+        path: '/sintomas/bajodeseo',
+        element: <SintomasBajodeseo/>,
+      },
+
+      {
+        path: '/sintomas/sofocos',
+        element: <SintomasSofoco/>,
+      },
+
+       {
+        path: '/sintomas/ansiedad',
+        element: <SintomasAnsiedad/>,
+      },
+
+      
+
+      
+   
+
       
     ],
   },
 ])
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

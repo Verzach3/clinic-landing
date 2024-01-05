@@ -1,0 +1,18 @@
+/* Class for colors in the blue-green range */
+.blue_green {
+  fill: #0b4b63;
+}
+
+/* Class for colors in the dark blue range */
+.dark_blue {
+  fill: #12445b;
+}
+
+/* Class for colors in the light blue range */
+.light_blue {
+  fill: #74b7c8;
+}
+
+.white {
+  fill: #fff;
+}
