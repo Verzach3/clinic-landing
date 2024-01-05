@@ -18,7 +18,6 @@ import {
   useMantineTheme,
 }from '@mantine/core';
 import {  useNavigate } from "react-router-dom";
-import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
 import {
   IconStatusChange,
@@ -32,8 +31,7 @@ import {
   IconGenderFemale
 }from '@tabler/icons-react'
 import classes from "./Header.module.css";
-
-
+import Logo from './Logo';
 
 
 const mockdata = [
@@ -150,7 +148,7 @@ export function Header() {
     <>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <MantineLogo size={30} />
+          <Logo />
           <Group h="101%" gap={0} visibleFrom="sm">
             <a href="/" className={classes.link}>
               Home
