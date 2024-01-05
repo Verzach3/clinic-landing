@@ -1,7 +1,8 @@
 import { Overlay, ThemeIcon, Text, Title, Container, SimpleGrid, rem} from "@mantine/core";
 import classes from "./About.module.css";
-
-import { IconGauge,IconServer, IconUser, IconMessage2, IconLock } from '@tabler/icons-react';
+import { GrUserAdd,GrWorkshop,GrAchievement   } from "react-icons/gr";
+import { GrSystem } from "react-icons/gr";
+import {IconGitPullRequest,IconServer, IconBuildingHospital, IconMessage2, IconLock,IconSocial } from '@tabler/icons-react';
 
 
 // Datos de los valores corporativos (ejemplo)
@@ -19,35 +20,42 @@ const CORE_VALUES = [
 
 export const MOCKDATA = [
   {
-    icon: IconGauge,
-    title: 'Enfoque Holístico',
+    icon: IconGitPullRequest,
+    title: 'Innovación Constante',
     description:
-      'Abordamos las causas fundamentales de los problemas de salud en lugar de simplemente tratar los síntomas, considerando todos los aspectos de tu bienestar, incluyendo la salud física, mental y emocional',
+      'Nos mantenemos a la vanguardia de la medicina moderna, incorporando constantemente las últimas investigaciones y tecnologías en nuestros métodos de tratamiento. Esto asegura que siempre estés recibiendo la atención más avanzada y eficaz disponible.',
   },
   {
-    icon: IconUser,
-    title: 'Planes Personalizados',
+    icon: GrAchievement ,
+    title: 'Educación y Empoderamiento',
     description:
-      'Tu viaje hacia la salud es único, y nuestras soluciones también lo son. Diseñamos planes de salud personalizados que se alinean con tus objetivos, garantizando resultados sostenibles.',
+      'Creemos firmemente en educar a nuestros pacientes sobre su salud. Te proporcionamos las herramientas y el conocimiento necesarios para tomar decisiones informadas, empoderándote para que seas un participante activo en tu viaje hacia el bienestar.',
   },
   {
-    icon: IconServer,
-    title: 'Equipo de Acompañamiento',
+    icon: GrUserAdd ,
+    title: 'Atención Integrativa',
     description:
-      'Nuestro equipo compasivo y experto está aquí para guiarte en cada paso del camino, brindando asesoramiento experto y apoyo inquebrantable. ahora uno mejor para este',
+      ' Integramos diversas modalidades de salud y bienestar para proporcionar una atención verdaderamente holística. Esto incluye terapias tradicionales y alternativas para asegurar un enfoque integral en tu cuidado de la salud.',
 
   },
   {
-    icon: IconLock,
-    title: 'Secure by default',
+    icon: GrWorkshop ,
+    title: 'Compromiso con la Excelencia',
     description:
-      'Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right',
+      'Nuestro compromiso es ofrecer el más alto nivel de cuidado a nuestros pacientes. Cada aspecto de nuestro servicio está diseñado para garantizar la excelencia, desde la atención clínica hasta la experiencia del paciente, asegurando que cada visita sea excepcional.',
   },
   {
-    icon: IconMessage2,
-    title: '24/7 Support',
+    icon: GrSystem ,
+    title: 'Acceso Digital',
     description:
-      'Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail',
+      'Ofrecemos soluciones digitales para la salud, facilitando el acceso a nuestros servicios desde cualquier lugar. Esto incluye consultas en línea, monitoreo de salud a distancia, y una plataforma digital para una comunicación eficiente, asegurando que siempre estés conectado con tu cuidado.',
+  },
+
+  {
+    icon: IconSocial,
+    title: 'Responsabilidad Social',
+    description:
+      'Estamos comprometidos con el bienestar de la comunidad. Participamos activamente en iniciativas de salud pública y educación sanitaria, contribuyendo a una sociedad más sana y consciente de la importancia del cuidado integral de la salud.',
   },
 ];
 
@@ -59,9 +67,9 @@ interface FeatureProps {
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
-    <div>
-      <ThemeIcon variant="light" size={40} radius={40}>
-        <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+    <div style={{ textAlign: 'center' }}>
+      <ThemeIcon variant="light" size={80} radius={50} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Icon style={{ width: rem(40), height: rem(40) }}  />
       </ThemeIcon>
       <Text mt="sm" mb={7}>
         {title}
