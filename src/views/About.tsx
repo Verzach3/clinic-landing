@@ -2,7 +2,7 @@ import { Overlay, ThemeIcon, Text, Title, Container, SimpleGrid, rem} from "@man
 import classes from "./About.module.css";
 import { GrUserAdd,GrWorkshop,GrAchievement   } from "react-icons/gr";
 import { GrSystem } from "react-icons/gr";
-import {IconGitPullRequest,IconServer, IconBuildingHospital, IconMessage2, IconLock,IconSocial } from '@tabler/icons-react';
+import {IconGitPullRequest,IconSocial } from '@tabler/icons-react';
 
 
 // Datos de los valores corporativos (ejemplo)
