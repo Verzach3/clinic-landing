@@ -55,6 +55,7 @@ const mockdata = [
     description: "Reducción notable de cabello en el cuero cabelludo.",
     path: '/sintomas/perdidacabello'
   },
+
   {
     icon: IconArrowDownBar,
     title: "Bajo deseo sexual",
@@ -74,6 +75,7 @@ const mockdata = [
       "Alteraciones del estado de ánimo, inquietud y tristeza profunda.",
     path: '/sintomas/ansiedad'
   },
+ 
 
 ];
 const mockdataCategorias = [

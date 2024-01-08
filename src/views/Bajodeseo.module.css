@@ -24,7 +24,7 @@ $mantine-breakpoint-lg: 1200px; // Grandes dispositivos - desktops*/
  
   
   .container {
-    height: rem(900px);
+    height: rem(950px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -80,15 +80,19 @@ $mantine-breakpoint-lg: 1200px; // Grandes dispositivos - desktops*/
 /* Styles Sección Hero 2 */
 
 .heroContac {
-
-  background-image: url(/CoupleBajo.png);
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
+  background-image: url(/CoupleHappy.png);
+  background-size: cover;
+  background-position: center;
 
-
+  /* Añadir regla para hacer la imagen de fondo más pequeña en dispositivos pequeños */
+  @media (max-width: $mantine-breakpoint-sm) {
+   
+    background-repeat: no-repeat;
+  }
 }
 
 .containerContac {

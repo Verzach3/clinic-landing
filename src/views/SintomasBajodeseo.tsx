@@ -4,8 +4,13 @@ import "@mantine/carousel/styles.css"
 import { Overlay, Container, Title, Button, Text } from "@mantine/core";
 import classes from "./Bajodeseo.module.css";
 
+
+
 import { ContactUs } from "../components/home/ContactUs";
 
+import { HowWorks } from "../components/Sintomas/HowWorks";
+
+import { ClientsComments } from "../components/Sintomas/ClientsComments";
 
 function SintomasBajodeseo() {
 
@@ -109,7 +114,6 @@ function SintomasBajodeseo() {
             <Text className={classes.descriptionContac} size="md" mt="xl">
               Existe un tratamiento para aumentar la producción natural de hormonas de crecimiento de su cuerpo para que se sienta como una versión más joven de usted mismo.
 
-
             </Text>
             <Button
               variant="gradient"
@@ -132,10 +136,22 @@ function SintomasBajodeseo() {
         </div>
       </div>
 
+      <Container className={classes.HowWorks} id="HowWorks">
+        <HowWorks />
+      </Container>
+
+
+      <div style={{ width: '100%', backgroundColor:"#0c1f47 "}}>
+        <ClientsComments />
+      </div>
+
+
+
       <Container className={classes.contactUsContainer} id="contact-us">
         <ContactUs />
       </Container>
 
+     
 
 
 
